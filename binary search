@@ -3,15 +3,16 @@ l=list(map(int,input().split()))
 
 l.sort()
 lf,r=0,n
-
+print(l)
 
 while lf<r:
 	m=(lf+r)//2
 	if l[m]==k:
 		print("yes")
+		break
 	elif l[m]<k:
-	    lf=m+1
+	    lf=m
 	else:
-		r=m-1
+		r=m
 else:
 	print("no")
